@@ -7,41 +7,35 @@ hide: true
 ---
 
 
-<!-- Liquid:  statements -->
-
 <!-- Include submenu from _includes to top of pages -->
 {% include nav/home.html %}
-<!--- Concatenation of site URL to frontmatter image  --->
+
+<!-- Concatenation of site URL to frontmatter image -->
 {% assign sprite_file = site.baseurl | append: page.image %}
-<!--- Has is a list variable containing mario metadata for sprite --->
+
+<!-- Has is a list variable containing mario metadata for sprite -->
 {% assign hash = site.data.mario_metadata %}  
-<!--- Size width/height of Sprit images --->
+
+<!-- Size width/height of Sprite images -->
 {% assign pixels = 256 %}
 
-<!--- HTML for page contains <p> tag named "Mario" and class properties for a "sprite"  -->
-
+<!-- HTML for page contains <p> tag named "Mario" and class properties for a "sprite" -->
 <p id="mario" class="sprite"></p>
-  
-<!--- Embedded Cascading Style Sheet (CSS) rules, 
-        define how HTML elements look 
---->
-<style>
 
-  /*CSS style rules for the id and class of the sprite...
-  */
+<!-- Embedded Cascading Style Sheet (CSS) rules, define how HTML elements look -->
+<style>
   .sprite {
-    height: {{pixels}}px;
-    width: {{pixels}}px;
-    background-image: url('{{sprite_file}}');
+    height: {{ pixels }}px;
+    width: {{ pixels }}px;
+    background-image: url('{{ sprite_file }}');
     background-repeat: no-repeat;
   }
 
-  /*background position of sprite element
-  */
   #mario {
-    background-position: calc({{animations[0].col}} * {{pixels}} * -1px) calc({{animations[0].row}} * {{pixels}}* -1px);
+    background-position: calc({{ animations[0].col }} * {{ pixels }} * -1px) calc({{ animations[0].row }} * {{ pixels }} * -1px);
   }
 </style>
+
 
 <!--- Embedded executable code--->
 <script>
