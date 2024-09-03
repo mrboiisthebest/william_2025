@@ -100,12 +100,12 @@ hide: true
 
     startRunning() {
       this.stopAnimate();
-      this.animate(this.obj["Run1"], 60);
+      this.animate(this.obj["Run1"], 16);
     }
 
     startPuffing() {
       this.stopAnimate();
-      this.animate(this.obj["Puff"], 0);
+      this.animate(this.obj["Puff"], -16);
     }
 
     startCheering() {
@@ -120,7 +120,7 @@ hide: true
 
     startResting() {
       this.stopAnimate();
-      this.animate(this.obj["Rest"], 0);
+      this.animate(this.obj["Rest"], -16);
     }
 
     stopAnimate() {
