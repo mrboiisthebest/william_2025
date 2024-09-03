@@ -100,7 +100,7 @@ hide: true
 
     startRunning() {
       this.stopAnimate();
-      this.animate(this.obj["Run1"], 6);
+      this.animate(this.obj["Run1"], 60);
     }
 
     startPuffing() {
