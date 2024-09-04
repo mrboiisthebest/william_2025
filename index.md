@@ -105,7 +105,7 @@ hide: true
 
     startPuffing() {
       this.stopAnimate();
-      this.animate(this.obj["Puff"], -16);
+      this.animate(this.obj["Puff"], 0);
     }
 
     startCheering() {
@@ -120,7 +120,7 @@ hide: true
 
     startResting() {
       this.stopAnimate();
-      this.animate(this.obj["Rest"], -16);
+      this.animate(this.obj["Rest"], 0);
     }
 
     stopAnimate() {
