@@ -9,10 +9,6 @@ Creator of Student 2025
     // Style looks pretty compact, but it has a repeat 4, what if we wanted it dynamic
 </style>
 
-<!-- This is orignal grid_container class, but now we are adding an id for JavaScript -->
-<div class "grid_container" id="grid_container">
-    <!-- We are hoping to make the insides with a JavaScript object -->
-</div>
 
 <style>
     /* Style looks pretty compact, trace grid-container and grid-item in the code */
