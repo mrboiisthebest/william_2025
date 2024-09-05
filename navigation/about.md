@@ -78,4 +78,5 @@ Creator of Student 2025
     }
 </script>
 
-
+## About Me
+Hi my name is william, I like to script and I teach my self how to code in LUA and I work on video games on the popular platform Roblox. I am still learning so dont expect me to make the best game you have ever seen in all of your lifetime. I teach myself how to code on the most popular learning site youtube. You can find me watching tv, coding, or sleeping if you ever come across me outside of school.
