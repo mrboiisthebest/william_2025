@@ -48,8 +48,7 @@ Creator of Student 2025
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "Im from here!"},
         {"flag": "f/f3/Flag_of_Russia.svg", "greeting": "Hi", "description": "My mom was born here"},
-        {"flag": "4/45/Flag_of_Ireland.svg", "greeting": "Luck of the irish", "description": "Part of my dads side of the family is from here"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
+        {"flag": "4/45/Flag_of_Ireland.svg", "greeting": "Luck of the irish", "description": "Part of my dads side of the family is from here"}
     ]; 
     
     // 3a. Consider how to update style count for size of container
