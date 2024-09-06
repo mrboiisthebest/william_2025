@@ -79,10 +79,14 @@ Creator of Student 2025
 </script>
 
 ## About Me
--I like to code and teach myself lua
--I like to make video games
--I am not a professenal dev I am still learning
--I teach myself how to code on the most popular learning site youtube
--class of 2028
+<html>  
+    <ul>
+        <li>I like to code and teach myself lua</li>
+        <li>I like to make video games</li>
+        <li>I am not a professenal dev I am still learning</li>
+        <li>I teach myself how to code on the most popular learning site youtube</li>
+        <li>class of 2028</li>
+    </ul>
+</html>
 
 
