@@ -74,10 +74,10 @@ Creator of Student 2025
         gridItem.appendChild(greeting);
 
         // Append the grid item DIV to the container DIV
+        
         container.appendChild(gridItem);
     }
 </script>
-
 ## About Me
 <html>  
     <ul>
@@ -89,4 +89,10 @@ Creator of Student 2025
     </ul>
 </html>
 
-
+<div class="image-gallery">
+  <img src="{{site.baseurl}}/images/about/Roblox_Studio_logo_2021_present.svg.png" alt="Image 1">
+  <img src="{{site.baseurl}}/images/about/What-is-Scripting.jpeg" alt="Image 2">
+  <img src="{{site.baseurl}}/images/about/ai-generated-8523907_640.webp" alt="Image 3">
+  <img src="{{site.baseurl}}/images/about/100th-day-of-school-cartoon-colored-clipart-free-vector.jpg" alt="Image 4">
+  <img src="{{site.baseurl}}/images/about/images.jpeg" alt="Image 5">
+</div>
