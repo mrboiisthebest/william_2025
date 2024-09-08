@@ -90,35 +90,6 @@ Creator of Student 2025
 </html>
 
 
-
-
-<html>
-<head>
-<style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
-</head>
-<body>
-
 <div class="image-gallery">
   <img src="{{site.baseurl}}/images/about/Roblox_Studio_logo_2021_present.svg.png" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/What-is-Scripting.jpeg" alt="Image 2">
@@ -126,5 +97,5 @@ div.desc {
   <img src="{{site.baseurl}}/images/about/100th-day-of-school-cartoon-colored-clipart-free-vector.jpg" alt="Image 4">
   <img src="{{site.baseurl}}/images/about/images.jpeg" alt="Image 5">
 </div>
-</body>
-</html>
+
+
