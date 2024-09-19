@@ -216,6 +216,8 @@ These are bullets
 
 ![image](https://github.com/user-attachments/assets/22ccd7b0-e718-41d2-aee9-671281cae68c)
 
+
+
 <script src="https://utteranc.es/client.js"
         repo="mrboiisthebest/william_2025"
         issue-term="title"

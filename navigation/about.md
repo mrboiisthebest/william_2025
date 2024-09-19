@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: About
 permalink: /about/
 ---
@@ -99,3 +99,11 @@ Creator of Student 2025
 </div>
 
 
+<script src="https://utteranc.es/client.js"
+        repo="mrboiisthebest/william_2025"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
