@@ -212,19 +212,19 @@ class Player {
     handleKeyDown({ keyCode }) {
         switch (keyCode) {
             case 87: // 'W' key
-                this.velocity.y -= this.yVelocity/2;
+                this.velocity.y = -15;
                 this.direction = 'up';
                 break;
             case 65: // 'A' key
-                this.velocity.x = this.xVelocity - this.xVelocity*2;
+                this.velocity.x = -15;
                 this.direction = 'left';
                 break;
             case 83: // 'S' key
-                this.velocity.y += this.yVelocity/2;
+                this.velocity.y = 15;
                 this.direction = 'down';
                 break;
             case 68: // 'D' key
-                this.velocity.x = this.xVelocity;
+                this.velocity.x = 15;
                 this.direction = 'right';
                 break;
         }
