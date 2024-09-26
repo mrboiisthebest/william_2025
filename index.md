@@ -5,8 +5,11 @@ description: Home Page
 image: /images/mario_animation.png
 hide: true
 ---
+
 {% include nav/home.html %}
 
+
+<script src="{{ site.baseurl }}/assets/js/rpg/rpgMusic.js"></script>
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -16,6 +19,7 @@ hide: true
 {% assign hash = site.data.mario_metadata %}  
 <!--- Size width/height of Sprit images --->
 {% assign pixels = 256 %}
+
 
 <!--- HTML for page contains <p> tag named "Mario" and class properties for a "sprite"  -->
 
