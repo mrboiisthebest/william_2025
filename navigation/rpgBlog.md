@@ -1,6 +1,6 @@
 ---
-layout: blog
-title: RPG
+layout: post
+title: Rpg Blog
 permalink: /rpgBlog/
 ---
 # IDEATION HACk
@@ -53,5 +53,5 @@ pip install -r requirements.txt
 bundle install
 ```
 # Downloading the RPG Files into your Directory
-> follow below link
-https://github.com/mrboiisthebest/william_2025/issues/10#issue-2551516564
+> Go to this [Issue](https://github.com/mrboiisthebest/william_2025/issues/10#issue-2551516564) to download the files needed
+
