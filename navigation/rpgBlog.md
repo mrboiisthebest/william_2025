@@ -3,6 +3,15 @@ layout: post
 title: Rpg Blog
 permalink: /rpgBlog/
 ---
+# Idea
+
+-Monster
+-Pickups
+-Walls
+-Sword
+-Garvity
+-Boostpads
+
 # IDEATION HACk
 
 # Integration
