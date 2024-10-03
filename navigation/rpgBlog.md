@@ -3,14 +3,17 @@ layout: post
 title: Rpg Blog
 permalink: /rpgBlog/
 ---
-# Idea
+# Ideas
 
--Monster
--Pickups
--Walls
--Sword
--Garvity
--Boostpads
+### Monsters
+there are monsters that youy need to avoid colliding with as if you touch them you will lose HP
+and if you lose all your hp you start at the begning
+### Pickups
+you can find items,powerups, armor, wepons, money, ect on the ground and put into a inventory sytem that hold all you items. this can most likley be stored in an array
+### Walls
+walls ar collidable and will block your path/movment if you collide with them. They can be used to hide from monsters or take cover and heal from combat
+### Wepons
+as mentioned previously you can find wepons as pickups. Wepons can break walls, damage monsters, and if they are used your character will be sent backwards a bit as a type of recoil
 
 # IDEATION HACk
 
