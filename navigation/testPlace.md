@@ -14,13 +14,6 @@ Here you will learn how to do some basic in Javascript!
 
 <script src="{{ site.baseurl }}/assets/js/testPlace.js"></script>
 
-
-
-
-
-
-
-
 # Variables
 
  ```

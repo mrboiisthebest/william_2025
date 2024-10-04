@@ -2,7 +2,7 @@ import GameEnv from './GameEnv.js';
 
 // Define non-mutable constants as defaults
 const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
-const STEP_FACTOR = 1000; // 1/nth, or N steps up and across the canvas
+const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
 const ANIMATION_RATE = 1; // 1/nth of the frame rate
 
 /**
@@ -17,7 +17,7 @@ const ANIMATION_RATE = 1; // 1/nth of the frame rate
  * making the code more modular and easier to maintain. By using this pattern, we can create
  * multiple instances of the Player class, each with its own state and behavior.
  * 
- * @class Player
+ * @abstract Player
  * @property {Object} position - The current position of the player.
  * @property {Object} velocity - The current velocity of the player.
  * @property {Object} scale - The scale of the player based on the game environment.
@@ -107,8 +107,8 @@ class Player {
         this.size = this.scale.height / this.scaleFactor; 
 
         // Recalculate the player's velocity steps based on the new scale
-        this.xVelocity = 5;//this.scale.width / this.stepFactor;
-        this.yVelocity = 5;//this.scale.height / this.stepFactor;
+        this.xVelocity = this.scale.width / this.stepFactor;
+        this.yVelocity = this.scale.height / this.stepFactor;
 
         // Set the player's width and height to the new size (object is a square)
         this.width = this.size;
@@ -208,26 +208,10 @@ class Player {
      * This method updates the player's velocity based on the key pressed.
      * 
      * @param {Object} event - The keydown event object.
+     * @abstract
      */
     handleKeyDown({ keyCode }) {
-        switch (keyCode) {
-            case 87: // 'W' key
-                this.velocity.y = -15;
-                this.direction = 'up';
-                break;
-            case 65: // 'A' key
-                this.velocity.x = -15;
-                this.direction = 'left';
-                break;
-            case 83: // 'S' key
-                this.velocity.y = 15;
-                this.direction = 'down';
-                break;
-            case 68: // 'D' key
-                this.velocity.x = 15;
-                this.direction = 'right';
-                break;
-        }
+        throw new Error('Method "handleKeyDown()" must be implemented');
     }
 
     /**
@@ -236,22 +220,10 @@ class Player {
      * This method stops the player's velocity based on the key released.
      * 
      * @param {Object} event - The keyup event object.
+     * @abstract
      */
     handleKeyUp({ keyCode }) {
-        switch (keyCode) {
-            case 87: // 'W' key
-                this.velocity.y = 0;
-                break;
-            case 65: // 'A' key
-                this.velocity.x = 0;
-                break;
-            case 83: // 'S' key
-                this.velocity.y = 0;
-                break;
-            case 68: // 'D' key
-                this.velocity.x = 0;
-                break;
-        }
+        throw new Error('Method "handleKeyUp()" must be implemented');
     }
 }
 
