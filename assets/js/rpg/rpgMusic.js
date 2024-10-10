@@ -1,5 +1,5 @@
 (function() {
-    console.log("rpgMusic.js has been loaded."); // Log when the JS file is loaded
+    console.log("rpgMusic.js has been loaded"); // Log when the JS file is loaded
 
     const audio = new Audio(window.audioPath); // Use the audio path set in the HTML
     audio.loop = true;
