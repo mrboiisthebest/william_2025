@@ -9,7 +9,7 @@ hide: true
 {% include nav/home.html %}
 
 
-<script src="{{ site.baseurl }}/assets/js/rpg/rpgMusic.js"></script>
+
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
