@@ -27,15 +27,6 @@ permalink: /rpg0x/
 </style>
 
 <canvas id='gameCanvas'></canvas>
-<h1>Welcome to the RPG Game!</h1>
-<div id="indicator">Music Playing...</div>
-<p>Press any key to play the music.</p>
-
-<!-- Set the audio path using site.baseurl -->
-<script>
-    window.audioPath = "{{ site.baseurl }}/assets/sounds/rpgSong.mp3"; // This will be processed by Jekyll
-</script>
-<script src="{{site.baseurl}}/assets/js/rpg0x/rpgMusic.js"></script>
 <div id="custom-alert" class="custom-alert">
     <button onclick="closeCustomAlert()" id="custom-alert-message"></button>
 </div>

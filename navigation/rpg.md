@@ -5,15 +5,7 @@ permalink: /rpg/
 ---
 
 <canvas id='gameCanvas'></canvas>
-<h1>Welcome to the RPG Game!</h1>
-<div id="indicator">Music Playing...</div>
-<p>Press any key to play the music.</p>
 
-<!-- Set the audio path using site.baseurl -->
-<script>
-    window.audioPath = "{{ site.baseurl }}/assets/sounds/rpgSong.mp3"; // This will be processed by Jekyll
-</script>
-<script src="{{site.baseurl}}/assets/js/rpg/rpgMusic.js"></script>
 
 <script type="module">
     import GameControl from '{{site.baseurl}}/assets/js/rpg/GameControl.js';
