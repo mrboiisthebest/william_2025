@@ -5,7 +5,10 @@ permalink: /rpg/
 ---
 
 <canvas id='gameCanvas'></canvas>
+<<<<<<< HEAD
 
+=======
+>>>>>>> e7817589879525baa2753e646f0288779e36651d
 
 <script type="module">
     import GameControl from '{{site.baseurl}}/assets/js/rpg/GameControl.js';
