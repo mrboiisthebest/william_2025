@@ -26,10 +26,16 @@ hide: true
     </a>
 </div>
 <br>
-## Notebooks
+## Notebooks/Hacks
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
     <a href="{{site.baseurl}}/csse/javascript/fundamentals/variableHacks" style="text-decoration: none;">
         <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
             Variables
+        </div>
+    </a>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/spritesAndLoops" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Sprites/Loops
         </div>
     </a>
