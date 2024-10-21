@@ -14,12 +14,12 @@ hide: true
             Snake Game
         </div>
     </a>
-    <a href="{{site.baseurl}}/rpg" style="text-decoration: none;">
+    <a href="{{site.baseurl}}/rpg1x" style="text-decoration: none;">
         <div style="background-color: #FF0000; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
             Turtle v0.0
         </div>
     </a>
-    <a href="{{site.baseurl}}/rpg0x" style="text-decoration: none;">
+    <a href="{{site.baseurl}}/rpg2x" style="text-decoration: none;">
         <div style="background-color: #FF8800; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
             Turtle v0.1
         </div>
