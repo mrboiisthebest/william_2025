@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Student Home 
+comments: true
 description: Home Page
 image: /images/mario_animation.png
 hide: true
@@ -60,4 +61,67 @@ hide: true
             Data types
         </div>
     </a> 
+</div>
+# Lesson Hacks
+
+### Nested Consditionals
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/csse/javascript/nested-conditionals/p1" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Hack 1
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/csse/javascript/nested-conditionals/p2" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Hack 2
+        </div>
+    </a>
+</div>
+<br>
+
+### Variables
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/Variables/lesson" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Hack
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/Variables/hacks" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Hack
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/Variables/hw" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            HW
+        </div>
+    </a>
+</div>
+<br>
+
+## Classes and Meathods
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/classes/intro/" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+           Hack
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/classes/methods/" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+           Hack
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/classes/statics/" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+           Hack
+        </div>
+    </a>
+    <a href="{{site.baseurl}}/csse/javascript/fundamentals/classes/hw/" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+           HW
+        </div>
+    </a>
 </div>
