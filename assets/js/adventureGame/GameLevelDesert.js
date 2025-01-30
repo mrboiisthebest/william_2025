@@ -3,6 +3,7 @@ import GameEnv from './GameEnv.js';
 import Background from './Background.js';
 import Player from './Player.js';
 import Npc from './Npc.js';
+import Quests from './Quests.js';
 
 class GameLevelDesert {
   constructor(path) {
@@ -180,7 +181,12 @@ const sprite_data_htmlhank = {
       { class: Npc, data: sprite_data_robot },
      // { class: Npc, data: sprite_data_htmlhank }, 
     ];
-  }
+    this.quests = [
+     Quests.createQuest("Cool Name",0,"coolName"),
+
+    ];
+
+  };
 
 }
 

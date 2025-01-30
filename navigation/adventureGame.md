@@ -179,3 +179,12 @@ permalink: /gamify/adventureGame
         updateNpcTracker();
     }
 </script>
+
+
+
+<script type="module">
+    //Quest system
+
+    import QuestSystem from '{{site.baseurl}}/assets/js/adventureGame/QuestSystem.js';
+    QuestSystem.load()
+</script>
