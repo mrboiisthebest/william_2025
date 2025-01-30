@@ -1,7 +1,7 @@
 title: Nighthawk Pages 
 description: "Class of 2028"
 owner_name: William Windle
-github_username: nmrboiisthebest
+github_username: mrboiisthebest
 github_repo: "william_2025" 
 baseurl: "/william_2025"
 future: true
@@ -28,4 +28,5 @@ header_pages:
   - navigation/rpgBlog.md
   - navigation/testPlace.md
   - README4YML.md
+  - navigation/adventureGame.md
 
