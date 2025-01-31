@@ -182,7 +182,7 @@ const sprite_data_htmlhank = {
      // { class: Npc, data: sprite_data_htmlhank }, 
     ];
     this.quests = [
-     Quests.createQuest("Cool Name",0,"coolName"),
+     Quests.createQuest("Cool Name",0,"coolName", Quests.scavengerQuest("Item", 3)),
 
     ];
 
