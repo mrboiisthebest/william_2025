@@ -5,20 +5,18 @@ const Quest = {
 
     Name: "",
     Compleated: false,
-    Count: null,
     ID: null,
     Type: null,
     TypeOValues: null,
     
     
-    createQuest: function(name, count, id, Values) {
+    createQuest: function(name, id, Values) {
         this.Name = name;
-        this.Count = count;
         this.ID = id;
         this.Type = Values.Type;
         this.TypeOValues = Values;
     
-        console.log("Quest created: ", this.Name, this.Count, this.ID)
+        console.log("Quest created: ", this.Name)
         QuestSystem.addQuest(this);
 
     
@@ -53,7 +51,7 @@ const Quest = {
 
 
 
-        
+
         return values;
     }
 

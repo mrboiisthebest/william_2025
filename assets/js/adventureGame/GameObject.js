@@ -1,4 +1,5 @@
 import GameEnv from './GameEnv.js';
+import QuestSystem from "./QuestSystem.js";
 
 /**
  * The GameObject class serves as a base class for all game objects.
@@ -163,6 +164,8 @@ class GameObject {
             // add the collisionType to the collisions array, making it the current collision
             this.state.collisionEvents.push(objectID);
             alert(objectGreet);
+            console.log(this)
+            QuestSystem.interactionChecks(objectID);
         }
         this.handleReaction();
     }
