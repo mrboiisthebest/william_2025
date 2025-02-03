@@ -86,6 +86,7 @@ class GameObject {
                 if (this.collisionData.hit) {
                     collisionDetected = true;
                     this.handleCollisionEvent();
+                    //QuestSystem.interactionChecks(objectID); // will send checks rapidly not once
                 }
             }
         }
@@ -164,10 +165,9 @@ class GameObject {
             // add the collisionType to the collisions array, making it the current collision
             this.state.collisionEvents.push(objectID);
             alert(objectGreet);
-            console.log(this)
-            QuestSystem.interactionChecks(objectID);
         }
         this.handleReaction();
+        QuestSystem.interactionChecks(objectID); // will send checks rapidly not once
     }
 
     /**
