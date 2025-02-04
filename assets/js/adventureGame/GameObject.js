@@ -1,4 +1,5 @@
 import GameEnv from './GameEnv.js';
+import Quest from './Quests.js';
 import QuestSystem from "./QuestSystem.js";
 
 /**
@@ -87,6 +88,7 @@ class GameObject {
                     collisionDetected = true;
                     this.handleCollisionEvent();
                     //QuestSystem.interactionChecks(objectID); // will send checks rapidly not once
+                    QuestSystem.interactionChecks(objectID); // will send checks rapidly not once
                 }
             }
         }
@@ -167,7 +169,6 @@ class GameObject {
             alert(objectGreet);
         }
         this.handleReaction();
-        QuestSystem.interactionChecks(objectID); // will send checks rapidly not once
     }
 
     /**

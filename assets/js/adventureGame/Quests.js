@@ -1,10 +1,11 @@
+import GameEnv from "./GameEnv.js";
 import QuestSystem from "./QuestSystem.js";
 
 
 const Quest = {
 
     Name: "",
-    Compleated: false,
+    Completed: false,
     ID: null,
     Type: null,
     TypeOValues: null,
@@ -23,8 +24,7 @@ const Quest = {
     },
     
     updateQuest: function(quest){
-        this.Compleated = quest.Compleated;
-        this.Count = quest.Count;
+        this.Completed = quest.Completed;
         this.ID = quest.ID;
     },
 
@@ -47,15 +47,13 @@ const Quest = {
             NPCsToTalkTo: NPCsToTalkTo,
         }
 
-
+        console.log(NPCsToTalkTo)
 
 
 
 
         return values;
     }
-
-    
-    }
+}
     
     export default Quest;
