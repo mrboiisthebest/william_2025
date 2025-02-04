@@ -19,31 +19,31 @@ static quests = [];
                 //Game Env -> Game Objects -> Index -> SpriteData -> ID
 
     }
-
     static interactionChecks(objectID){
         //this function gets called repidly
-        console.log(`quest checks for ${objectID} `)
         // GameEnv -> Game Objects -> Index -> SpriteData -> ID
         for (let i = 0; i < this.quests.length; i++) {
             const quest = this.quests[i];
-            if (quest.Type === "NPCtalks") {
-                if (quest.TypeOValues.NPCsToTalkTo.includes(objectID)) {
-                    console.log(`quest checks for ${objectID} `)
+            //console.log(`quest checks for ${objectID} `)
+            if(quest.Type === "NPCtalks"){
+                for (let j = 0; j < quest.TypeOValues.NPCsToTalkTo.length; j++) {
+                    const npcID = quest.TypeOValues.NPCsToTalkTo[j];
+                    //console.log(`checking ${npcID}`)
+                    if(npcID === objectID){
+                        console.log("NPCtalks quest updated")
+                        //add logic for when the quest is completed
+                    }
                 }
             }
+            if(quest.Type === "Scavenger"){
+                if(quest.TypeOValues.itemToFind === objectID){
+                    console.log("Scavenger quest updated")
+                    //add logic for when the quest is completed
+                }
+            }
+
         }
     }
-
-
-    static npcQuestChecks(NPCsToTalkTo){
-        //this function gets called repidly
-
-    }
-    static scavengerQuestChecks(itemToFind, amountToFind){
-        //this function gets called repidly
-
-    }
-
 }
 
 export default QuestSystem;
