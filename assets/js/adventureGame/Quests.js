@@ -23,9 +23,33 @@ const Quest = {
     
     },
     
-    updateQuest: function(quest){
+    updateQuest: function(quest, objectID){
         this.Completed = quest.Completed;
         this.ID = quest.ID;
+
+        //this function gets called repidly
+        console.log("Updating quest: ", quest.Name)
+        if(quest.Type === "NPCtalks"){
+            for (let j = 0; j < quest.TypeOValues.NPCsToTalkTo.length; j++) {
+                const npcID = quest.TypeOValues.NPCsToTalkTo[j];
+                if(npcID === objectID){
+                    //add logic for when the quest is completed
+                    this.TypeOValues.NPCsToTalkTo.splice(j, 1);
+                    console.log(`NPC ${npcID} was talked to. Quest progress updated`)
+                    console.log(this)
+                    if(this.TypeOValues.NPCsToTalkTo.length === 0){
+                        this.Completed = true
+                        console.log("Quest completed")}
+                }
+            }
+        }
+
+         if(quest.Type === "Scavenger"){
+            if(quest.TypeOValues.itemToFind === objectID){
+                console.log("Scavenger quest updated")
+                //add logic for when the quest is completed
+            }
+        }
     },
 
 

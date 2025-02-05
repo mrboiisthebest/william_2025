@@ -182,7 +182,7 @@ const sprite_data_htmlhank = {
      // { class: Npc, data: sprite_data_htmlhank }, 
     ];
     this.quests = [
-     Quests.createQuest("Cool Name", "coolName", Quests.npcQuest(["Tux"])),
+     Quests.createQuest("Bring me the penguin", "penguinfind", Quests.npcQuest(["Tux"])),
 
     ];
 

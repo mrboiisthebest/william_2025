@@ -1,4 +1,4 @@
-
+import Quest from "./Quests.js";
 
 export class QuestSystem{
 static quests = [];
@@ -24,22 +24,13 @@ static quests = [];
         // GameEnv -> Game Objects -> Index -> SpriteData -> ID
         for (let i = 0; i < this.quests.length; i++) {
             const quest = this.quests[i];
-            //console.log(`quest checks for ${objectID} `)
             if(quest.Type === "NPCtalks"){
-                for (let j = 0; j < quest.TypeOValues.NPCsToTalkTo.length; j++) {
-                    const npcID = quest.TypeOValues.NPCsToTalkTo[j];
-                    //console.log(`checking ${npcID}`)
-                    if(npcID === objectID){
-                        console.log("NPCtalks quest updated")
-                        //add logic for when the quest is completed
-                    }
-                }
+                    //add logic for when the quest is completed
+                    Quest.updateQuest(quest, objectID)
             }
             if(quest.Type === "Scavenger"){
-                if(quest.TypeOValues.itemToFind === objectID){
-                    console.log("Scavenger quest updated")
                     //add logic for when the quest is completed
-                }
+                    Quest.updateQuest(quest, objectID)
             }
 
         }
