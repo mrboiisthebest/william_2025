@@ -180,7 +180,7 @@ const sprite_data_htmlhank = {
      Quests.createQuest("name1", "id1", Quests.npcQuest(["Tux"])),
      Quests.createQuest("name2", "id2", Quests.npcQuest(["Tux"])),
     ];
-    this.quests.forEach(quest => QuestSystem.addQuest(quest));
+    //this.quests.forEach(quest => QuestSystem.addQuest(quest));
   };
 
 }

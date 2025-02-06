@@ -18,7 +18,6 @@ class Quest {
     static updateQuest(quest, objectID){
         //this function gets called repidly
         if(quest.Type === "NPCtalks"){
-            console.log(quest)
             for (let j = 0; j < quest.TypeOValues.NPCsToTalkTo.length; j++) {
                 const npcID = quest.TypeOValues.NPCsToTalkTo[j];
                 if(npcID === objectID){
