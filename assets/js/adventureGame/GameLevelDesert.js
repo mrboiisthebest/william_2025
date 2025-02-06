@@ -4,6 +4,7 @@ import Background from './Background.js';
 import Player from './Player.js';
 import Npc from './Npc.js';
 import Quests from './Quests.js';
+import { QuestSystem } from './QuestSystem.js';
 
 class GameLevelDesert {
   constructor(path) {
@@ -13,7 +14,6 @@ class GameLevelDesert {
     let width = GameEnv.innerWidth;
     let height = GameEnv.innerHeight;
 
-
     // Background data
     const image_src_desert = path + "/images/gamify/desert.png"; // be sure to include the path
     const image_data_desert = {
@@ -22,7 +22,6 @@ class GameLevelDesert {
         src: image_src_desert,
         pixels: {height: 580, width: 1038}
     };
-
 
     // Player data for Chillguy
     const sprite_src_chillguy = path + "/images/gamify/chillguy.png"; // be sure to include the path
@@ -44,7 +43,6 @@ class GameLevelDesert {
         hitbox: { widthPercentage: 0.45, heightPercentage: 0.2 },
         keypress: { up: 87, left: 65, down: 83, right: 68 } // W, A, S, D
     };
-
 
     // NPC data for Tux 
     const sprite_src_tux = path + "/images/gamify/tux.png"; // be sure to include the path
@@ -77,11 +75,9 @@ class GameLevelDesert {
         }
       };
 
-
-
-      // NPC data for Octocat
-      const sprite_src_octocat = path + "/images/gamify/octocat.png"; // be sure to include the path
-      const sprite_data_octocat = {
+    // NPC data for Octocat
+    const sprite_src_octocat = path + "/images/gamify/octocat.png"; // be sure to include the path
+    const sprite_data_octocat = {
         id: 'Octocat',
         greeting: "Hi I am Octocat! I am the GitHub code code code collaboration mascot",
         src: sprite_src_octocat,
@@ -109,7 +105,6 @@ class GameLevelDesert {
           ] 
         }
     }
-  
 
     const sprite_src_robot = path + "/images/gamify/robot.png"; // be sure to include the path
     const sprite_data_robot = {
@@ -182,10 +177,10 @@ const sprite_data_htmlhank = {
      // { class: Npc, data: sprite_data_htmlhank }, 
     ];
     this.quests = [
-     Quests.createQuest("Bring me the penguin", "penguinfind", Quests.npcQuest(["Tux"])),
-
+     Quests.createQuest("name1", "id1", Quests.npcQuest(["Tux"])),
+     Quests.createQuest("name2", "id2", Quests.npcQuest(["Tux"])),
     ];
-
+    this.quests.forEach(quest => QuestSystem.addQuest(quest));
   };
 
 }

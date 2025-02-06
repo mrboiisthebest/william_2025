@@ -1,7 +1,7 @@
 import Quest from "./Quests.js";
 
 export class QuestSystem{
-static quests = [];
+static quests = [];//this contains all the quests that are currently active mainly contains current lvl quests
 
     constructor(){
         
@@ -13,17 +13,14 @@ static quests = [];
 
     static addQuest(questObject){
         this.quests.push(questObject)
-        console.log(questObject)
         console.log("Quest added: ", questObject.Name)
-
-                //Game Env -> Game Objects -> Index -> SpriteData -> ID
-
+        console.log(this.quests)
     }
     static interactionChecks(objectID){
         //this function gets called repidly
         // GameEnv -> Game Objects -> Index -> SpriteData -> ID
         for (let i = 0; i < this.quests.length; i++) {
-            const quest = this.quests[i];
+            let quest = this.quests[i];
             if(quest.Type === "NPCtalks"){
                     //add logic for when the quest is completed
                     Quest.updateQuest(quest, objectID)

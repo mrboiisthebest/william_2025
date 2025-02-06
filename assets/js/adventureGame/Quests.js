@@ -2,80 +2,66 @@ import GameEnv from "./GameEnv.js";
 import QuestSystem from "./QuestSystem.js";
 
 
-const Quest = {
-
-    Name: "",
-    Completed: false,
-    ID: null,
-    Type: null,
-    TypeOValues: null,
-    
-    
-    createQuest: function(name, id, Values) {
+class Quest {
+    constructor(name, id, values) {
         this.Name = name;
         this.ID = id;
-        this.Type = Values.Type;
-        this.TypeOValues = Values;
-    
-        console.log("Quest created: ", this.Name)
-        QuestSystem.addQuest(this);
+        this.Type = values.Type;
+        this.TypeOValues = values;
+        this.Completed = false;
+    }
 
-    
-    },
-    
-    updateQuest: function(quest, objectID){
-        this.Completed = quest.Completed;
-        this.ID = quest.ID;
+    static createQuest(name, id, values) {
+        return new Quest(name, id, values);
+    }
 
+    static updateQuest(quest, objectID){
         //this function gets called repidly
-        console.log("Updating quest: ", quest.Name)
         if(quest.Type === "NPCtalks"){
+            console.log(quest)
             for (let j = 0; j < quest.TypeOValues.NPCsToTalkTo.length; j++) {
                 const npcID = quest.TypeOValues.NPCsToTalkTo[j];
                 if(npcID === objectID){
                     //add logic for when the quest is completed
-                    this.TypeOValues.NPCsToTalkTo.splice(j, 1);
+                    quest.TypeOValues.NPCsToTalkTo.splice(j, 1);
                     console.log(`NPC ${npcID} was talked to. Quest progress updated`)
-                    console.log(this)
-                    if(this.TypeOValues.NPCsToTalkTo.length === 0){
-                        this.Completed = true
-                        console.log("Quest completed")}
+                    if(quest.TypeOValues.NPCsToTalkTo.length === 0){
+                        quest.Completed = true
+                        console.log(`Quest completed ${quest.Name}`)}
                 }
             }
         }
 
          if(quest.Type === "Scavenger"){
-            if(quest.TypeOValues.itemToFind === objectID){
-                console.log("Scavenger quest updated")
-                //add logic for when the quest is completed
+            for (let jj = 0; jj < quest.TypeOValues.itemsToFind.length; jj++){
+                const itemID = quest.TypeOValues.itemsToFind[jj];
+                if(itemID === objectID){
+                    //add logic for when the quest is completed
+                    quest.TypeOValues.itemsToFind.splice(jj, 1);
+                    console.log(`Item ${itemID} was found. Quest progress updated`)
+                    if(quest.TypeOValues.itemsToFind.length === 0){
+                        quest.Completed = true
+                        console.log(`Quest completed ${quest.Name}`)}
+                }
             }
         }
-    },
+            
+    }
 
-
-    //scavenger type quest were you need to collect a certain amount of an object
-    scavengerQuest: function(itemToFind, amountToFind){
+    static scavengerQuest(itemsToFind){
         const values = {
             Type: "Scavenger",
-            itemToFind: itemToFind,
-            amountToFind: amountToFind
+            itemsToFind: itemsToFind
         }
 
         return values;
-    },
+    }
 
-    //you need to talk to all npcs listed in the array
-    npcQuest: function(NPCsToTalkTo){
+   static npcQuest(NPCsToTalkTo){
         const values = {
             Type: "NPCtalks",
             NPCsToTalkTo: NPCsToTalkTo,
         }
-
-        console.log(NPCsToTalkTo)
-
-
-
-
         return values;
     }
 }
