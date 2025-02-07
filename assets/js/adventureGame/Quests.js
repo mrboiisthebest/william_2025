@@ -9,6 +9,7 @@ class Quest {
         this.Type = values.Type;
         this.TypeOValues = values;
         this.Completed = false;
+        this.Activated = false;
     }
 
     static createQuest(name, id, values) {
@@ -27,6 +28,7 @@ class Quest {
                     if(quest.TypeOValues.NPCsToTalkTo.length === 0){
                         quest.Completed = true
                         console.log(`Quest completed ${quest.Name}`)}
+                        quest.Activated = false
                 }
             }
         }
@@ -41,6 +43,7 @@ class Quest {
                     if(quest.TypeOValues.itemsToFind.length === 0){
                         quest.Completed = true
                         console.log(`Quest completed ${quest.Name}`)}
+                        quest.Activated = false
                 }
             }
         }

@@ -21,6 +21,8 @@ static quests = [];//this contains all the quests that are currently active main
         // GameEnv -> Game Objects -> Index -> SpriteData -> ID
         for (let i = 0; i < this.quests.length; i++) {
             let quest = this.quests[i];
+            if (quest.Activated === false){return;}
+            
             if(quest.Type === "NPCtalks"){
                     //add logic for when the quest is completed
                     Quest.updateQuest(quest, objectID)
