@@ -30,7 +30,8 @@ class QuestNpc extends Character {
             case 'e': // Player 1 interaction
             case 'u': // Player 2 interaction
                 //add logic to give the player random quests
-                this.assignQuest(this.findRandomQuest());
+                let randQuest = this.findRandomQuest(this.listOfDeactivatedQuests());
+                this.assignQuest(randQuest);
                 break;
         }
     }
@@ -47,16 +48,39 @@ class QuestNpc extends Character {
             }
         }
     }
-    findRandomQuest(){
-        let randIndex = Math.floor(Math.random() * QuestSystem.quests.length);
-        return QuestSystem.quests[randIndex];
+
+    findRandomQuest(deactivatedQuests){
+if (deactivatedQuests.length === 0){return false;}
+        function findRandIndex(){
+            let randIndex = Math.floor(Math.random() * deactivatedQuests.length);
+            let quest = deactivatedQuests[randIndex];
+
+            if (quest.Activated === false){
+                return quest;
+            }
+        }
+      return findRandIndex();
     }
 
     assignQuest(quest){
+        if (quest === false || undefined){console.log("No quests to give");return;}
         quest.Activated = true;
         console.log(`Quest assigned: ${quest.Name}`);
-        console.log(quest);
+        console.log(QuestSystem.quests);
     }
+
+
+    listOfDeactivatedQuests(){
+        let deactivatedQuests = [];
+        for (let i = 0; i < QuestSystem.quests.length; i++){
+            if (QuestSystem.quests[i].Activated === false && QuestSystem.quests[i].Completed === false){
+                deactivatedQuests.push(QuestSystem.quests[i]);
+            }
+        }
+        console.log("got list of deactivated quests");
+        return deactivatedQuests;
+
+     }
 }
 export default QuestNpc;
 
