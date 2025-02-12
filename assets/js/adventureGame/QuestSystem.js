@@ -1,30 +1,30 @@
 import Quest from "./Quests.js";
 
-export class QuestSystem{
-static quests = [];//this contains all the quests that are currently active mainly contains current lvl quests
+export class QuestSystem {
+    static quests = []; // This contains all the quests that are currently active, mainly contains current level quests
 
-    constructor(){
-        
+    constructor() {}
+
+    static load() {
+        // Used for debugging from the Md file
+        console.log("Loading quest system");
     }
 
-    static load(){
-        //used for debugging from the Md file
-        console.log("Loading quest system")
+    static addQuest(questObject) {
+        this.quests.push(questObject);
+        console.log("Quest added: ", questObject.Name);
+        console.log(this.quests);
     }
 
-    static addQuest(questObject){
-        this.quests.push(questObject)
-        console.log("Quest added: ", questObject.Name)
-        console.log(this.quests)
-    }
-    static interactionChecks(objectID){
-        //this function gets called repidly per second
+    static interactionChecks(objectID) {
+        // This function gets called repeatedly per second
         for (let i = 0; i < this.quests.length; i++) {
             let quest = this.quests[i];
-            if (quest.Activated === false){return;}
-            
-            if(quest.Type === "NPCtalks"){
-                    Quest.updateQuest(quest, objectID)
+            if (quest.Activated === false) {
+                return;
+            }
+
+            if (quest.Type === "NPCtalks") {
             }
             if(quest.Type === "Scavenger"){
                     Quest.updateQuest(quest, objectID)
@@ -32,6 +32,12 @@ static quests = [];//this contains all the quests that are currently active main
 
         }
     }
+
+    static message(text){
+        const TextBox = document.getElementById("questMessage")
+        TextBox.innerHTML = text
+    }
+
 }
 
 export default QuestSystem;
