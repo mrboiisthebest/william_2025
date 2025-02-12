@@ -21,21 +21,28 @@ export class QuestSystem {
         for (let i = 0; i < this.quests.length; i++) {
             let quest = this.quests[i];
             if (quest.Activated === false) {
-                return;
+                continue;
             }
 
             if (quest.Type === "NPCtalks") {
+                Quest.updateQuest(quest, objectID);
             }
             if(quest.Type === "Scavenger"){
-                    Quest.updateQuest(quest, objectID)
+                Quest.updateQuest(quest, objectID)
             }
 
         }
     }
 
-    static message(text){
+    static message(text, goBacktoOGText){
         const TextBox = document.getElementById("questMessage")
+        const originalText = TextBox.innerHTML
         TextBox.innerHTML = text
+        if(goBacktoOGText){
+            setTimeout(() => {
+                TextBox.innerHTML = originalText
+            }, 2000);
+        }
     }
 
 }

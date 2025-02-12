@@ -32,9 +32,16 @@ class QuestNpc extends Character {
             case 'e': // Player 1 interaction
             case 'u': // Player 2 interaction
                 // Add logic to give the player random quests
-                if (this.isPlayerNear()) {
+                if (this.isPlayerNear() && this.areAnyQuestActive() === false) {
                     let randQuest = this.findRandomQuest(this.listOfDeactivatedQuests());
                     this.assignQuest(randQuest);
+                }else{
+                    if(this.isPlayerNear() === true){
+                        if (this.areAnyQuestActive()){
+                            QuestSystem.message("Finish your current quest first!", true);
+                            console.log("Finish your current quest");
+                        }
+                    }
                 }
                 break;
         }
@@ -90,7 +97,7 @@ class QuestNpc extends Character {
 
     assignQuest(quest) {
         if (quest === false || quest === undefined) {
-            console.log("No quests to give");
+            QuestSystem.message(`I have no more quests for you`);
             return;
         }
         quest.Activated = true;
@@ -110,6 +117,15 @@ class QuestNpc extends Character {
         return deactivatedQuests;
     }
 
+    areAnyQuestActive(){
+        for (let i = 0; i < QuestSystem.quests.length; i++) {
+            if (QuestSystem.quests[i].Activated === true) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     sendMessage(quest) {
         const type = quest.Type;
         let text = "";
@@ -124,14 +140,16 @@ class QuestNpc extends Character {
         }
     }
 
+
+
     scavengerMessage(quest) {
-        let text = `Can you talk to ${quest.TypeOValues.NPCsToTalkTo[0]}`;
+        let text = `Can bring me  ${quest.TypeOValues.itemsToFind} I need the ASAP!!!`;
         return text;
     }
 
     npcQuestMessage(quest) {
         console.log(quest);
-        let text = `Can you talk to ${quest.TypeOValues.NPCsToTalkTo}`;
+        let text = `Can you talk to ${quest.TypeOValues.NPCsToTalkTo} for me?`;
         return text;
     }
 }

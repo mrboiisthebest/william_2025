@@ -162,8 +162,8 @@ const SpriteDataFancyGuy = {
       { class: QuestNpc, data: SpriteDataFancyGuy},
     ];
     this.quests = [
-     Quests.createQuest("name1", "id1", Quests.npcQuest(["Tux","Robot"])),
-     Quests.createQuest("name2", "id2", Quests.npcQuest(["Tux","Robot"])),
+     Quests.createQuest("name1", "id1", Quests.npcQuest([`Tux`,`Robot`])),
+     Quests.createQuest("name2", "id2", Quests.npcQuest([`Tux`,`Robot`])),
     ];
   };
 
