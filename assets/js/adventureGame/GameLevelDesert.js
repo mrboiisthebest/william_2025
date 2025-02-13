@@ -174,7 +174,7 @@ const ScavengerFindObject = {
       { class: Npc, data: sprite_data_octocat },
       { class: Npc, data: sprite_data_robot },
       { class: QuestNpc, data: SpriteDataFancyGuy},
-      { class: ScavengerObject, data: ScavengerFindObject},
+      //{ class: ScavengerObject, data: ScavengerFindObject},
     ];
     this.quests = [
      Quests.createQuest("Fine Me the ingedent I need for my soup", "soup", Quests.scavengerQuest([`ScavengerObject`])),
