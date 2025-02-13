@@ -16,7 +16,6 @@ class Quest {
     }
 
     static updateQuest(quest, objectID) {
-        console.log("updating quest");
         // this function gets called repeatedly
         if (quest.Type === "NPCtalks") {
             for (let j = 0; j < quest.TypeOValues.NPCsToTalkTo.length; j++) {

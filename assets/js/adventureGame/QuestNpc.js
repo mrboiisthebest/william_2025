@@ -35,9 +35,9 @@ class QuestNpc extends Character {
                 if (this.isPlayerNear() && this.areAnyQuestActive() === false) {
                     let randQuest = this.findRandomQuest(this.listOfDeactivatedQuests());
                     this.assignQuest(randQuest);
-                }else{
-                    if(this.isPlayerNear() === true){
-                        if (this.areAnyQuestActive()){
+                } else {
+                    if (this.isPlayerNear() === true) {
+                        if (this.areAnyQuestActive()) {
                             QuestSystem.message("Finish your current quest first!", true);
                             console.log("Finish your current quest");
                         }
@@ -66,18 +66,15 @@ class QuestNpc extends Character {
      * @returns {boolean} - True if the player is near the NPC, false otherwise.
      */
     isPlayerNear() {
-        let objects = GameEnv.gameObjects
+        let objects = GameEnv.gameObjects;
         for (let i = 0; i < objects.length; i++) {
             let object = objects[i];
             if (object instanceof Player) {
                 this.isCollision(object);
                 return this.collisionData.hit;
             }
-            
         }
-
-        const player = GameEnv.gameObjects.player; 
-        return this.isCollision(player);
+        return false;
     }
 
     findRandomQuest(deactivatedQuests) {
@@ -117,7 +114,7 @@ class QuestNpc extends Character {
         return deactivatedQuests;
     }
 
-    areAnyQuestActive(){
+    areAnyQuestActive() {
         for (let i = 0; i < QuestSystem.quests.length; i++) {
             if (QuestSystem.quests[i].Activated === true) {
                 return true;
@@ -140,10 +137,8 @@ class QuestNpc extends Character {
         }
     }
 
-
-
     scavengerMessage(quest) {
-        let text = `Can bring me  ${quest.TypeOValues.itemsToFind} I need the ASAP!!!`;
+        let text = `Can bring me ${quest.TypeOValues.itemsToFind} I need the ASAP!!!`;
         return text;
     }
 
@@ -151,6 +146,10 @@ class QuestNpc extends Character {
         console.log(quest);
         let text = `Can you talk to ${quest.TypeOValues.NPCsToTalkTo} for me?`;
         return text;
+    }
+
+    addScavengerQuestObject() {
+        //create the scavenger object in ScavengerObject.js then add it to the game in here
     }
 }
 

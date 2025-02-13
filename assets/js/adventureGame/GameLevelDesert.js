@@ -5,7 +5,8 @@ import Player from './Player.js';
 import Npc from './Npc.js';
 import QuestNpc from './QuestNpc.js';
 import Quests from './Quests.js';
-import { QuestSystem } from './QuestSystem.js';
+import QuestSystem from './QuestSystem.js';
+import ScavengerObject from './ScavengerObject.js';
 
 class GameLevelDesert {
   constructor(path) {
@@ -150,7 +151,20 @@ const SpriteDataFancyGuy = {
     orientation: { rows: 2, columns: 4 },
     down: { row: 0, start: 0, columns: 1 },  // This is the stationary NPC, down is default
     hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
-}; 
+};
+const ScavengerObjectsrc = path + "/images/gamify/stockguy.png"; // be sure to include the path
+const ScavengerFindObject = {
+    id: 'ScavengerObject',
+    src: ScavengerObjectsrc,
+    greeting: "You have collected an object",
+    SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
+    ANIMATION_RATE: 60,
+    pixels: { height: 882, width: 1356 },
+    INIT_POSITION: { x: (width / 2.), y: (height / 4) },
+    orientation: { rows: 2, columns: 4 },
+    down: { row: 0, start: 0, columns: 1 },  // This is the stationary NPC, down is default
+    hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
+};  
 
     // List of objects defnitions for this level
     this.objects = [
@@ -160,10 +174,11 @@ const SpriteDataFancyGuy = {
       { class: Npc, data: sprite_data_octocat },
       { class: Npc, data: sprite_data_robot },
       { class: QuestNpc, data: SpriteDataFancyGuy},
+      { class: ScavengerObject, data: ScavengerFindObject},
     ];
     this.quests = [
-     Quests.createQuest("name1", "id1", Quests.npcQuest([`Tux`,`Robot`])),
-     Quests.createQuest("name2", "id2", Quests.npcQuest([`Tux`,`Robot`])),
+     Quests.createQuest("Fine Me the ingedent I need for my soup", "soup", Quests.scavengerQuest([`ScavengerObject`])),
+    //Quests.createQuest("Talk to my friends", "friends", Quests.npcQuest([`Tux`,`Robot`])),
     ];
   };
 
