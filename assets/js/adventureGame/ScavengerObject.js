@@ -38,8 +38,6 @@ class ScavengerObject extends Character{
         const player = GameEnv.gameObjects.player; 
         return this.isCollision(player);
     }
-    newObject(){
-    }
 }
 
 export default ScavengerObject;

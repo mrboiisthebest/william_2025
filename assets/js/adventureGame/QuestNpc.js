@@ -151,7 +151,6 @@ class QuestNpc extends Character {
     }
 
     addScavengerQuestObject() {
-
         let width = GameEnv.innerWidth;
         let height = GameEnv.innerHeight;
         const path = GameControl.path;
