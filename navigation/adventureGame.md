@@ -79,7 +79,7 @@ permalink: /gamify/adventureGame
 }
 #questBox {
     position: fixed; /* or absolute, depending on your layout */
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, 50%);
     background-color: white;
@@ -210,5 +210,5 @@ permalink: /gamify/adventureGame
 </script>
 
 <div id="questBox">
-    <h2 id="questMessage">TEXT</h2>
+    <h2 id="questMessage"></h2>
 </div>
