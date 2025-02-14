@@ -177,8 +177,12 @@ const ScavengerFindObject = {
       //{ class: ScavengerObject, data: ScavengerFindObject},
     ];
     this.quests = [
-     Quests.createQuest("Fine Me the ingedent I need for my soup", "soup", Quests.scavengerQuest([`ScavengerObject`])),
-    //Quests.createQuest("Talk to my friends", "friends", Quests.npcQuest([`Tux`,`Robot`])),
+     Quests.createQuest("Find Me the ingedent I need for my soup", "findsoup", Quests.scavengerQuest([`Soup`])),
+     Quests.createQuest("I lost my rock :(", "findrock", Quests.scavengerQuest([`Rock`])),
+     Quests.createQuest("Get my mom her flowers", "momsflower", Quests.scavengerQuest([`Flower`])),
+     Quests.createQuest("Talk to my friend", "talktfriend", Quests.npcQuest([`Tux`])),
+     Quests.createQuest("Talk to my friends", "talktofriends", Quests.npcQuest([`Tux`,`Robot`])),
+     Quests.createQuest("Talk to my uncle", "talktouncle", Quests.npcQuest([`Octocat`])),
     ];
   };
 

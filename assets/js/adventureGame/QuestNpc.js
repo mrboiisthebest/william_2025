@@ -98,6 +98,7 @@ class QuestNpc extends Character {
             QuestSystem.message(`I have no more quests for you`);
             return;
         }
+        if (quest.Type === "Scavenger") {this.addScavengerQuestObject(quest.TypeOValues.itemsToFind);}
         quest.Activated = true;
         console.log(`Quest assigned: ${quest.Name}`);
         console.log(QuestSystem.quests);
@@ -140,7 +141,6 @@ class QuestNpc extends Character {
 
     scavengerMessage(quest) {
         let text = `Can bring me ${quest.TypeOValues.itemsToFind} I need the ASAP!!!`;
-        this.addScavengerQuestObject();//remove
         return text;
     }
 
@@ -150,24 +150,8 @@ class QuestNpc extends Character {
         return text;
     }
 
-    addScavengerQuestObject() {
-        let width = GameEnv.innerWidth;
-        let height = GameEnv.innerHeight;
-        const path = GameControl.path;
-        const ScavengerObjectsrc = path + "/images/gamify/stockguy.png";//placeholder img
-            const object = new ScavengerObject({
-                id: 'ScavengerObject',
-                src: ScavengerObjectsrc,
-                greeting: "You have collected an object",
-                SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
-                ANIMATION_RATE: 60,
-                pixels: { height: 882, width: 1356 },
-                INIT_POSITION: { x: (width / 2.), y: (height / 4) },
-                orientation: { rows: 2, columns: 4 },
-                down: { row: 0, start: 0, columns: 1 },  // This is the stationary NPC, down is default
-                hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
-            });
-            console.log("Scavenger Object created");
+    addScavengerQuestObject(id) {
+        ScavengerObject.getRandomObject(id);
     }
 }
 
