@@ -2,7 +2,7 @@
 toc: true
 layout: post
 title: Csse2 Final Project
-description: Bl
+description: Code Code Code
 permalink: csse2Final/home
 ---
 
@@ -92,3 +92,28 @@ Burndowns helped me stay on task while creating my game changes or finding what 
 
 ### Draw IO
 ![alt text](image-1.png)
+
+
+# Slef Refletion
+
+| Topic             | Score 0/1         | Reflection         |
+|-------------------|-------------------|--------------------|
+| OOP      | 0.7      | There are many places where OOP should have been used and there are some places that I used OOP like in the scav obj, but not in Quest.js  |
+
+| Classes(OOP)      | 0.8      | I have a great understanding on classes But every method I created was a static method which is fine inside of QuestSystem.js but not inside of Quests.js |
+
+| HTML      | 0.85    | I like how I made the quest output it is very well done but when the text is blank the box still shows with nothing inside of it  |
+
+| Sprites     | 0.8     | All sprites but every added sprite was a static sprite only displaying a single frame unlike how the tux npc has a wave animation  |
+
+| Optimisation     | 0.9      | One main thing that makes games laggy is poor optimisation which is mainly caused from to many checks. When creating my quest system checks I did not want it to run every frame, so I made the quest checks only run when a collition occurs |
+
+| Row 6, Topic      | Row 6, Score      | Row 6, Reflection  |
+
+| Row 7, Topic      | Row 7, Score      | Row 7, Reflection  |
+
+| Row 8, Topic      | Row 8, Score      | Row 8, Reflection  |
+
+| Row 9, Topic      | Row 9, Score      | Row 9, Reflection  |
+
+| Row 10, Topic     | Row 10, Score     | Row 10, Reflection |
