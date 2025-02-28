@@ -3,7 +3,7 @@ toc: true
 layout: post
 title: Csse2 Final Project
 description: Bl
-permalink: adventuregame/csse2Final
+permalink: csse2Final/home
 ---
 
 <html>
@@ -19,6 +19,14 @@ permalink: adventuregame/csse2Final
     </tr>
 </table>
 </html>
+
+Requrments
+
+5 points - 5 things you did over 24 weeks, Skills learned, Issues, Burn Down, Lesson(s) taught, Live Reviews presentation(s) given, GitHub analytics, 8 blogs mentioned above, organizing all. of this in your blog
+2 point - Latest Game Feature
+1 point - Latest Game Feature blog write up, plus visualization of code understanding (using drawIO)
+1 point -  N@tM feedback from your demo, we are hoping for adult feedback or Computer Science student feedback (5 - 10 points of feedback)
+
 
 
 # Accomplishments
@@ -70,3 +78,18 @@ While making my quest system I needed to stay on track and to do so I had to cre
 ![alt text](image.png)
 
 Burndowns helped me stay on task while creating my game changes or finding what is the next step on the game feuture. The above image is a small Screen Shot of the burndown I used for creating the quest system.
+
+
+# Latest Game Feature
+<html>
+<table>
+    <tr>
+        <td><a href="{{site.baseurl}}/adventuregame/howitworks">How It Wokrs</a></td>
+        <td><a href="{{site.baseurl}}/adventuregame/documentation">Documentation</a></td>
+        <td><a href="{{site.baseurl}}/adventuregame/home">Home</a></td>
+    </tr>
+</table>
+</html>
+
+### Draw IO
+![alt text](image-1.png)
