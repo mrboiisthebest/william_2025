@@ -65,4 +65,8 @@ With class methods I was able to let my custom classes have custom values and fu
 While making my quest system I needed to stay on track and to do so I had to create a checlist so I can stay on tarck. Having a checklist helps you procrastinate less as you know exactly what to do next allowing for you to just jump right into coding as you wont need to create ideas as you have them all down
 
 
+# Burndowns
 
+![alt text](image.png)
+
+Burndowns helped me stay on task while creating my game changes or finding what is the next step on the game feuture. The above image is a small Screen Shot of the burndown I used for creating the quest system.
