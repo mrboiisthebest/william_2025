@@ -84,9 +84,8 @@ Burndowns helped me stay on task while creating my game changes or finding what 
 <html>
 <table>
     <tr>
-        <td><a href="{{site.baseurl}}/adventuregame/howitworks">How It Wokrs</a></td>
+        <td><a href="{{site.baseurl}}/adventuregame/howitworks">How It Works</a></td>
         <td><a href="{{site.baseurl}}/adventuregame/documentation">Documentation</a></td>
-        <td><a href="{{site.baseurl}}/adventuregame/home">Home</a></td>
     </tr>
 </table>
 </html>
