@@ -21,13 +21,21 @@ permalink: adventuregame/csse2Final
 </html>
 
 
-# 5 Accomplishments
+# Accomplishments
+
+Some things that I am proud of making/using was the ability to use other js files as I have never used seprate js files and used them in sync with one another, This made my coding feel more fluid and orginized. I alos liked my custom object that I added for my scavenger quests. Although sometimes it may be buggy. It was my first custom object on the screen. 
 
 ### QuestSystem.js
+The Quest System is basicly the brain of the quests as it sends quest updates,handels interation, and updates the ui for the quests. Although it may not be perfect it was the best I could make at the time. As if I were to remake the quest system everything would be done much more diffrently
 
 ### UI for quests
+The UI for quests is using some CSS (fromp gpt as I cant make it look good) when creating the ui I learned how to find objects inside of the html space to allow me to comunicate to the player outside of just the console.
 
-### Created custom Object
+### Created custom Scavenger Object
+Creating the scav object was another difficult addition to my quest system as I needed to learn proper OOP to create more than 1 object at a time
+
+### Quest NPC
+The quest npc is the only way on how to get quests. Working with this npc I learned how to use interactions from the player to cause JS code to run, update JS code inside of a diffrint JS file.
 
 
 # Skills Learned
