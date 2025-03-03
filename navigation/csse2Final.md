@@ -105,3 +105,14 @@ Burndowns helped me stay on task while creating my game changes or finding what 
 | Optimisation      | 0.9               | One main thing that makes games laggy is poor optimisation which is mainly caused from too many checks. When creating my quest system checks I did not want it to run every frame, so I made the quest checks only run when a collision occurs |
 | Error Handling    | 0.9      | when encountering an err I was able to back track and see where to fix the err even one sthat are as simple as a typo, to erros that are caused between sepreate js files  |
 | Testing and Debugging      | 0.9     | I was able to debug very well while testing to see if code section were running, consdtions were met, show when quests are created, shwo the quests, and much more. |
+
+
+# Next Steps
+
+| Feature            | Changes                |
+|--------------------|------------------------|
+| Quests         | When I created the quest system I did not use proper OOP limiting what I can do. The next thing I should do is convert the file into an OOP file for much easir use  |
+| Giving Quests          | At the moment there is a set amount of quests. A way I want to change this is to add inf quests by randomly making quests with set rules  |
+| Scavanger Objects          | The next step to fix the scavenger objects is to fix the quest being compleated instantly some times |
+| More Quest Types          | If I were to add more quest types I would add way to give object from around the map to npcs to complete the quest and give rewards when finsihing them  |
+| PLayer Movment          | The next step for the player movement to to make it move at a more set pace that does not speed up over time  |
