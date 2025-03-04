@@ -21,12 +21,12 @@ permalink: csse2Final/home
 </html>
 
 Requrments
-
+```
 5 points - 5 things you did over 24 weeks, Skills learned, Issues, Burn Down, Lesson(s) taught, Live Reviews presentation(s) given, GitHub analytics, 8 blogs mentioned above, organizing all. of this in your blog
 2 point - Latest Game Feature
 1 point - Latest Game Feature blog write up, plus visualization of code understanding (using drawIO)
 1 point -  N@tM feedback from your demo, we are hoping for adult feedback or Computer Science student feedback (5 - 10 points of feedback)
-
+```
 
 
 # Accomplishments
@@ -116,3 +116,6 @@ Burndowns helped me stay on task while creating my game changes or finding what 
 | Scavanger Objects          | The next step to fix the scavenger objects is to fix the quest being compleated instantly some times |
 | More Quest Types          | If I were to add more quest types I would add way to give object from around the map to npcs to complete the quest and give rewards when finsihing them  |
 | PLayer Movment          | The next step for the player movement to to make it move at a more set pace that does not speed up over time  |
+
+
+
